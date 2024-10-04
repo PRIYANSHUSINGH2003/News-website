@@ -1,27 +1,71 @@
+/* Contact.css */
+
 .contact-page {
     padding: 40px 20px;
     max-width: 800px;
     margin: 0 auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    background-color: #ffffff; /* Changed to white for better contrast */
+    border-radius: 10px; /* Slightly larger border-radius */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
     text-align: center; /* Center align text */
+}
+
+h1 {
+    font-size: 2.5rem; /* Larger font size for the heading */
+    color: #333; /* Darker color for better readability */
+    margin-bottom: 20px; /* Spacing below the heading */
+}
+
+p {
+    color: #555; /* Softer color for text */
+    line-height: 1.6; /* Increased line height for readability */
+    margin-bottom: 15px; /* Spacing between paragraphs */
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 15px; /* Space between icons */
-    margin: 20px 0; /* Space above and below the icons */
+    gap: 20px; /* Increased space between icons */
+    margin: 30px 0; /* Space above and below the icons */
 }
 
 .social-icons a {
     color: #007bff; /* Default color for icons */
-    font-size: 2rem; /* Size for icons */
-    transition: color 0.3s; /* Transition effect */
+    font-size: 2.5rem; /* Larger size for better visibility */
+    transition: color 0.3s, transform 0.3s; /* Transition for color and scale */
 }
 
 .social-icons a:hover {
     color: #0056b3; /* Color on hover */
+    transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .contact-page {
+        padding: 30px 15px; /* Adjust padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 2rem; /* Smaller heading size */
+    }
+
+    p {
+        font-size: 1rem; /* Smaller paragraph size */
+    }
+
+    .social-icons a {
+        font-size: 2rem; /* Adjust icon size */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem; /* Further decrease heading size for very small screens */
+    }
+
+    p {
+        font-size: 0.9rem; /* Further decrease paragraph size */
+    }
 }
