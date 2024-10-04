@@ -1,0 +1,157 @@
+/* Overall Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; /* Modern and professional font */
+    background-color: #f9f9f9;
+    color: #333;
+}
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.controls input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.controls select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #0d6efd, #004085); /* Subtle gradient for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for elevation */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    color: white;
+}
+
+.header .logo {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase; /* Capitalized for a stronger brand identity */
+    letter-spacing: 1px;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+.header .logo:hover {
+    color: #ffcc00; /* Highlight on hover for a premium feel */
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+}
+
+.header nav ul li {
+    position: relative;
+}
+
+.header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.header nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Dropdown Menu on Hover (optional enhancement) */
+.header nav ul li:hover ul {
+    display: block;
+}
+
+.header nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0d6efd;
+    padding: 10px 0;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.header nav ul li ul li {
+    width: 180px;
+    padding: 10px 20px;
+}
+
+.header nav ul li ul li a {
+    color: white;
+    font-weight: 400;
+}
+
+.header nav ul li ul li a:hover {
+    color: #ffcc00;
+    background-color: #0056b3;
+}
+
+/* Sidebar Toggle Button */
+.header .sidebar-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none; /* Initially hidden for larger screens */
+}
+
+.header .sidebar-toggle:hover {
+    color: #ffcc00;
+}
+
+/* Responsive Header for Smaller Devices */
+@media (max-width: 768px) {
+    .header nav ul {
+        display: none;
+    }
+
+    .header .sidebar-toggle {
+        display: block; /* Visible on small screens */
+    }
+}
+
+.categories {
+    cursor: pointer; /* Pointer cursor for clickable category */
+}
+
+.menu-icon {
+    display: none; /* Hide on larger screens */
+    font-size: 1.5rem; /* Size for hamburger icon */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links on mobile */
+    }
+    
+    .menu-icon {
+        display: block; /* Show hamburger icon */
+    }
+
+    /* Show sidebar when icon is clicked */
+    .header {
+        justify-content: space-between;
+    }
+}

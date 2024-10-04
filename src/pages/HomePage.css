@@ -1,0 +1,99 @@
+.homepage {
+    padding: 30px;
+    background-color: #f4f6f9; /* Softer background color for a modern feel */
+}
+
+section {
+    margin-bottom: 60px; /* Increased margin for better spacing */
+    padding: 20px;
+    background-color: white; /* Distinguish sections with white background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Light shadow for section separation */
+    border-radius: 12px;
+}
+
+section h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+section h1:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #0d6efd;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.news-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px; /* Increased gap for better readability */
+    padding: 0 30px;
+}
+
+.news-list:hover {
+    transition: all 0.3s ease-in-out;
+}
+.controls {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center align controls */
+    gap: 15px; /* Space between controls */
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.search-input {
+    padding: 10px;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    flex: 1 1 200px; /* Allow the input to grow */
+    min-width: 150px; /* Minimum width for smaller screens */
+    max-width: 300px; /* Maximum width */
+    font-size: 16px;
+}
+
+.select-dropdown {
+    padding: 10px;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    flex: 1 1 150px; /* Allow dropdowns to grow */
+    min-width: 120px; /* Minimum width for smaller screens */
+    max-width: 200px; /* Maximum width */
+    font-size: 16px;
+}
+
+/* Additional styles for mobile responsiveness */
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column; /* Stack controls vertically on small screens */
+        align-items: stretch; /* Full width */
+    }
+}
+
+/* Responsive design for mobile and tablet */
+@media (max-width: 768px) {
+    .news-list {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+
+    section h1 {
+        font-size: 2rem;
+    }
+}

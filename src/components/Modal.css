@@ -1,0 +1,67 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+} 
+
+.modal-content {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+}
+
+.modal-iframe {
+    width: 100%;
+    height: 70vh; /* Adjust height as needed */
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    color: rgb(255, 0, 0);
+    font-weight: 900;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1001; /* Ensure button is above the iframe */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .modal-iframe {
+        height: 60vh; /* Adjust for smaller screens */
+    }
+
+    .close-button {
+        font-size: 16px; /* Slightly smaller button on small screens */
+    }
+}
+
+.iframe-error {
+    padding: 20px;
+    text-align: center;
+}
+
+.iframe-error p {
+    margin-bottom: 10px;
+}
+
+.iframe-error a {
+    color: blue;
+    text-decoration: underline;
+}
