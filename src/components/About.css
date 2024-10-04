@@ -1,0 +1,66 @@
+.about-page {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.about-page h1 {
+    color: #343a40; /* Darker heading color */
+    font-size: 2.5rem; /* Larger font size for the main title */
+    margin-bottom: 20px; /* Space below the heading */
+    text-align: center; /* Center the title */
+    border-bottom: 2px solid #007bff; /* Underline with color */
+    padding-bottom: 10px; /* Space between title and underline */
+}
+
+.about-page h2 {
+    margin-top: 30px; /* Increased space above subheadings */
+    color: #495057; /* Subheading color */
+    font-size: 1.75rem; /* Slightly larger subheading */
+    margin-bottom: 10px; /* Space below subheadings */
+}
+
+.about-page p {
+    line-height: 1.8; /* Increased line height for readability */
+    color: #495057; /* Body text color */
+    margin-bottom: 20px; /* Space below paragraphs */
+}
+
+.about-page ul {
+    list-style-type: none; /* Remove default list style */
+    padding: 0; /* Remove padding */
+}
+
+.about-page ul li {
+    background-color: #e9ecef; /* Light gray background for list items */
+    margin: 10px 0; /* Space between list items */
+    padding: 10px; /* Padding inside list items */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Transition effect */
+}
+
+.about-page ul li:hover {
+    background-color: #d1d3d5; /* Darker background on hover */
+}
+
+.about-page a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Transition effect */
+}
+
+.about-page a:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+.about-page .contact {
+    margin-top: 40px; /* Space above contact section */
+    text-align: center; /* Center the contact section */
+    font-weight: bold; /* Bold text for emphasis */
+    color: #495057; /* Consistent text color */
+}
