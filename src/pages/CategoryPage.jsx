@@ -25,7 +25,7 @@ const CategoryPage = () => {
             const response = await fetch(url, options);
             const result = await response.json();
             console.log(result);
-            setNews(result.data || []);  // Check if articles exists and set it, otherwise use an empty array
+            setNews(result.data || []);  // Check if articles exist and set it, otherwise use an empty array
         } catch (error) {
             setError(error);  // Set error if any occurs
             console.error('Error fetching category news:', error);
@@ -38,6 +38,17 @@ const CategoryPage = () => {
     useEffect(() => {
         fetchCategoryNews();
     }, [category, language]);
+
+    // Function to load ads
+    const loadAds = () => {
+        if (window.adsbygoogle) {
+            (window.adsbygoogle = window.adsbygoogle || []).push({});
+        }
+    };
+
+    useEffect(() => {
+        loadAds(); // Load ads when component mounts
+    }, [news]); // Re-run when news changes
 
     // Display loading state or error message if necessary
     if (loading) return <p className="loading">Loading news...</p>;
@@ -63,10 +74,6 @@ const CategoryPage = () => {
                 data-ad-format="fluid"
                 data-ad-client="ca-pub-8553283570584154"
                 data-ad-slot="4377728357"></ins>
-            <script>
-                {(adsbygoogle = window.adsbygoogle || []).push({})}
-            </script>
-
 
             <div className="news-lists">
                 {news.map((article, index) => (
@@ -92,9 +99,6 @@ const CategoryPage = () => {
                 data-ad-format="fluid"
                 data-ad-client="ca-pub-8553283570584154"
                 data-ad-slot="4377728357"></ins>
-            <script>
-                {(adsbygoogle = window.adsbygoogle || []).push({})}
-            </script>
 
             {/* AdSense Ad - Place a banner at the bottom of the page */}
             <ins className="adsbygoogle"
@@ -103,9 +107,6 @@ const CategoryPage = () => {
                 data-ad-slot="4757696834"
                 data-ad-format="auto"
                 data-full-width-responsive="true"></ins>
-            <script>
-                {(adsbygoogle = window.adsbygoogle || []).push({})}
-            </script>
         </div>
     );
 };
